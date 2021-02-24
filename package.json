@@ -1,6 +1,6 @@
 {
   "name": "@whalecoiner/months",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Supply a month name, abbr, or number and get back a month object",
   "main": "src/index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github-whalecoiner:whalecoiner/months.git"
+    "url": "git@github.com:whalecoiner/months.git"
   },
   "author": "Whalecoiner",
   "license": "ISC",
