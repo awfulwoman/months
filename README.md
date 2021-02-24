@@ -4,6 +4,8 @@ A barebones utility to convert between month names, numbers, and abbreviations.
 
 Designed for use on node, but will probably work in the browser once compiled with [Babel](https://babeljs.io/).
 
+![](months.gif)
+
 ## Installation
 
 ```bash
