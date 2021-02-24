@@ -1,0 +1,24 @@
+{
+  "name": "@whalecoiner/months",
+  "version": "1.0.0",
+  "description": "Supply a month name, abbr, or number and get back a month object",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "env": [
+    "jest"
+  ],
+  "keywords": [
+    "month",
+    "months",
+    "date"
+  ],
+  "author": "Whalecoiner",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.20.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "jest": "^26.6.3"
+  }
+}
