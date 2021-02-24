@@ -1,4 +1,4 @@
-name: publish_to_npm_on_release
+name: publish_to_npm_on_version_change
 on: push
 jobs:
   build:
