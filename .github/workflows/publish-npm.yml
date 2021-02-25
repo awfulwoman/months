@@ -4,14 +4,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    # Setup .npmrc file to publish to npm
-    - uses: actions/setup-node@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup node
+      uses: actions/setup-node@v2
       with:
         node-version: '12.x'
-    - run: npm install
-    - run: npm test
-    - uses: JS-DevTools/npm-publish@v1
+    - name: Install dependencies
+      run: npm install
+    - name: Run tests
+      run: npm test
+    - name: Publish to npm
+      id: publish
+      uses: JS-DevTools/npm-publish@v1
       with:
         token: ${{ secrets.NPM_TOKEN }}
         access: public
+    - name: Create release
+      id: create_release
+      if: steps.publish.outputs.type != 'none'
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ steps.publish.outputs.version }}
+        release_name: Release ${{ steps.publish.outputs.version }}
